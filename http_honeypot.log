@@ -1,0 +1,17 @@
+2024-09-24 19:24:12,731 - http_honeypot - INFO - HTTP Honeypot serving on port 8000
+2024-09-24 19:24:59,362 - http_honeypot - INFO - GET request from 192.168.0.105 for /
+2024-09-24 19:24:59,437 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.css
+2024-09-24 19:24:59,442 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.js
+2024-09-24 19:59:03,568 - http_honeypot - INFO - HTTP Honeypot serving on port 8000
+2024-09-24 19:59:20,284 - http_honeypot - INFO - GET request from 192.168.0.105 for /
+2024-09-24 19:59:20,375 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.css
+2024-09-24 19:59:20,375 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.js
+2024-09-24 20:02:00,622 - http_honeypot - INFO - HTTP Honeypot serving on port 8000
+2024-09-24 20:06:12,451 - http_honeypot - INFO - HTTP Honeypot serving on port 8000
+2024-09-24 20:06:37,182 - http_honeypot - INFO - GET request from 192.168.0.105 for /
+2024-09-24 20:06:37,262 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.css
+2024-09-24 20:06:37,262 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.js
+2024-09-24 20:10:28,601 - http_honeypot - INFO - HTTP Honeypot serving on port 8000
+2024-09-24 20:11:26,421 - http_honeypot - INFO - GET request from 192.168.0.105 for /
+2024-09-24 20:11:26,509 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.css
+2024-09-24 20:11:26,543 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.js
