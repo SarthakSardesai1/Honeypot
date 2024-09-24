@@ -1,0 +1,206 @@
+2024-08-21 21:45:42,997 - root - INFO - New connection from: 127.0.0.1
+2024-08-21 21:45:42,997 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_for_Windows_8.6)
+2024-08-21 21:45:43,021 - paramiko.transport - ERROR - Socket exception: An existing connection was forcibly closed by the remote host (10054)
+2024-09-23 20:49:54,429 - root - INFO - New connection from: 127.0.0.1
+2024-09-23 20:49:54,436 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_for_Windows_8.6)
+2024-09-23 20:49:54,542 - paramiko.transport - ERROR - Socket exception: An existing connection was forcibly closed by the remote host (10054)
+2024-09-23 20:52:40,339 - root - INFO - New connection from: 127.0.0.1
+2024-09-23 20:52:40,339 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_for_Windows_8.6)
+2024-09-23 20:52:40,373 - paramiko.transport - ERROR - Socket exception: An existing connection was forcibly closed by the remote host (10054)
+2024-09-23 20:55:00,865 - root - INFO - New connection from: 192.168.0.105
+2024-09-23 20:55:00,878 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_for_Windows_8.6)
+2024-09-23 20:55:02,969 - paramiko.transport - ERROR - Socket exception: An existing connection was forcibly closed by the remote host (10054)
+2024-09-23 20:55:07,117 - root - INFO - New connection from: 192.168.0.105
+2024-09-23 20:55:07,121 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_for_Windows_8.6)
+2024-09-23 20:55:08,998 - paramiko.transport - INFO - Auth rejected (none).
+2024-09-23 20:55:08,998 - root - INFO - client called get_allowed_auths (192.168.0.105) with username 91976
+2024-09-23 20:55:17,612 - root - INFO - new client credentials (192.168.0.105): username: 91976, password: sknfjdke
+2024-09-23 20:55:17,612 - paramiko.transport - INFO - Auth granted (password).
+2024-09-23 20:55:17,612 - root - INFO - client called check_channel_request (192.168.0.105): session
+2024-09-23 20:55:17,612 - root - INFO - Client mac (192.168.0.105): hmac-sha2-256-etm@openssh.com
+2024-09-23 20:55:17,612 - root - INFO - Client compression (192.168.0.105): none
+2024-09-23 20:55:17,612 - root - INFO - Client SSH version (192.168.0.105): SSH-2.0-OpenSSH_for_Windows_8.6
+2024-09-23 20:55:17,612 - root - INFO - Client SSH cipher (192.168.0.105): aes128-ctr
+2024-09-23 20:55:19,532 - root - INFO - Command receied (192.168.0.105): ls
+2024-09-23 20:55:19,532 - root - INFO - Response from honeypot (192.168.0.105): 
+2024-09-23 20:55:20,664 - root - INFO - Command receied (192.168.0.105): ls
+2024-09-23 20:55:20,664 - root - INFO - Response from honeypot (192.168.0.105): 
+2024-09-23 20:55:30,681 - paramiko.transport - INFO - Disconnect (code 11): disconnected by user
+2024-09-23 20:56:49,029 - root - INFO - New connection from: 192.168.0.105
+2024-09-23 20:56:49,034 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_for_Windows_8.6)
+2024-09-23 20:56:49,044 - paramiko.transport - INFO - Auth rejected (none).
+2024-09-23 20:56:49,044 - root - INFO - client called get_allowed_auths (192.168.0.105) with username 91976
+2024-09-23 20:56:51,628 - root - INFO - new client credentials (192.168.0.105): username: 91976, password: sdsdas
+2024-09-23 20:56:51,628 - paramiko.transport - INFO - Auth granted (password).
+2024-09-23 20:56:51,628 - root - INFO - client called check_channel_request (192.168.0.105): session
+2024-09-23 20:56:51,628 - root - INFO - Client mac (192.168.0.105): hmac-sha2-256-etm@openssh.com
+2024-09-23 20:56:51,628 - root - INFO - Client compression (192.168.0.105): none
+2024-09-23 20:56:51,628 - root - INFO - Client SSH version (192.168.0.105): SSH-2.0-OpenSSH_for_Windows_8.6
+2024-09-23 20:56:51,628 - root - INFO - Client SSH cipher (192.168.0.105): aes128-ctr
+2024-09-23 20:56:53,373 - root - INFO - Command receied (192.168.0.105): aad
+2024-09-23 20:57:01,712 - root - INFO - Command receied (192.168.0.105): sjd
+2024-09-23 20:57:09,563 - root - INFO - Command receied (192.168.0.105): 
+2024-09-23 20:57:10,640 - root - INFO - Command receied (192.168.0.105): fsf
+2024-09-23 20:57:11,552 - root - INFO - Command receied (192.168.0.105): a
+2024-09-23 20:57:11,799 - root - INFO - Command receied (192.168.0.105): a
+2024-09-23 20:57:12,000 - root - INFO - Command receied (192.168.0.105): 
+2024-09-23 20:57:12,217 - root - INFO - Command receied (192.168.0.105): a
+2024-09-23 20:57:12,424 - root - INFO - Command receied (192.168.0.105): 
+2024-09-23 20:57:12,612 - root - INFO - Command receied (192.168.0.105): a
+2024-09-23 20:57:12,766 - root - INFO - Command receied (192.168.0.105): a
+2024-09-23 20:57:15,507 - root - INFO - Command receied (192.168.0.105): ls
+2024-09-23 20:57:15,507 - root - INFO - Response from honeypot (192.168.0.105): 
+2024-09-23 20:57:17,769 - root - INFO - Command receied (192.168.0.105): ls -la
+2024-09-23 20:57:17,769 - root - INFO - Response from honeypot (192.168.0.105): 
+2024-09-23 20:57:19,524 - root - INFO - Command receied (192.168.0.105): -la
+2024-09-23 20:57:21,041 - root - INFO - Command receied (192.168.0.105): mamca
+2024-09-23 20:57:24,478 - root - INFO - Command receied (192.168.0.105): whoami
+2024-09-23 20:57:29,693 - root - INFO - Command receied (192.168.0.105): sv
+2024-09-23 20:57:39,693 - paramiko.transport - INFO - Disconnect (code 11): disconnected by user
+2024-09-23 21:40:06,898 - root - INFO - New connection from: 192.168.0.105
+2024-09-23 21:40:06,901 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_for_Windows_8.6)
+2024-09-23 21:40:06,922 - paramiko.transport - INFO - Auth rejected (none).
+2024-09-23 21:40:06,924 - root - INFO - client called get_allowed_auths (192.168.0.105) with username 91976
+2024-09-23 21:40:09,029 - root - INFO - new client credentials (192.168.0.105): username: 91976, password: bssudausv
+2024-09-23 21:40:09,029 - paramiko.transport - INFO - Auth granted (password).
+2024-09-23 21:40:09,029 - root - INFO - client called check_channel_request (192.168.0.105): session
+2024-09-23 21:40:09,029 - root - INFO - Client mac (192.168.0.105): hmac-sha2-256-etm@openssh.com
+2024-09-23 21:40:09,029 - root - INFO - Client compression (192.168.0.105): none
+2024-09-23 21:40:09,029 - root - INFO - Client SSH version (192.168.0.105): SSH-2.0-OpenSSH_for_Windows_8.6
+2024-09-23 21:40:09,029 - root - INFO - Client SSH cipher (192.168.0.105): aes128-ctr
+2024-09-23 21:40:12,478 - root - INFO - Command receied (192.168.0.105): la
+2024-09-23 21:40:14,092 - root - INFO - Command receied (192.168.0.105): sda
+2024-09-23 21:40:14,989 - root - INFO - Command receied (192.168.0.105): 
+2024-09-23 21:40:17,689 - root - INFO - Command receied (192.168.0.105): xa
+2024-09-23 21:40:29,042 - paramiko.transport - INFO - Disconnect (code 11): disconnected by user
+{"asctime": "2024-09-23 22:03:09,709", "name": "root", "levelname": "INFO", "message": "New connection from: 192.168.0.105"}
+{"asctime": "2024-09-23 22:03:09,709", "name": "paramiko.transport", "levelname": "INFO", "message": "Connected (version 2.0, client OpenSSH_for_Windows_8.6)"}
+{"asctime": "2024-09-23 22:03:09,709", "name": "paramiko.transport", "levelname": "INFO", "message": "Auth rejected (none)."}
+{"asctime": "2024-09-23 22:03:09,709", "name": "root", "levelname": "INFO", "message": "client called get_allowed_auths (192.168.0.105) with username 91976"}
+{"asctime": "2024-09-23 22:03:12,060", "name": "root", "levelname": "INFO", "message": "new client credentials (192.168.0.105): username: 91976, password: adddfse"}
+{"asctime": "2024-09-23 22:03:12,060", "name": "paramiko.transport", "levelname": "INFO", "message": "Auth granted (password)."}
+{"asctime": "2024-09-23 22:03:12,060", "name": "root", "levelname": "INFO", "message": "client called check_channel_request (192.168.0.105): session"}
+{"asctime": "2024-09-23 22:03:12,060", "name": "root", "levelname": "INFO", "message": "Client mac (192.168.0.105): hmac-sha2-256-etm@openssh.com"}
+{"asctime": "2024-09-23 22:03:12,060", "name": "root", "levelname": "INFO", "message": "Client compression (192.168.0.105): none"}
+{"asctime": "2024-09-23 22:03:12,060", "name": "root", "levelname": "INFO", "message": "Client SSH version (192.168.0.105): SSH-2.0-OpenSSH_for_Windows_8.6"}
+{"asctime": "2024-09-23 22:03:12,060", "name": "root", "levelname": "INFO", "message": "Client SSH cipher (192.168.0.105): aes128-ctr"}
+{"asctime": "2024-09-23 22:03:13,544", "name": "root", "levelname": "INFO", "message": "Command receied (192.168.0.105): ls"}
+{"asctime": "2024-09-23 22:03:13,544", "name": "root", "levelname": "INFO", "message": "Response from honeypot (192.168.0.105): "}
+{"asctime": "2024-09-23 22:03:14,457", "name": "root", "levelname": "INFO", "message": "Command receied (192.168.0.105): csd"}
+{"asctime": "2024-09-23 22:03:19,465", "name": "root", "levelname": "INFO", "message": "Command receied (192.168.0.105): cd users.txt"}
+{"asctime": "2024-09-23 22:03:40,329", "name": "paramiko.transport", "levelname": "INFO", "message": "Disconnect (code 11): disconnected by user"}
+{"asctime": "2024-09-23 22:07:45,891", "name": "root", "levelname": "INFO", "message": "New connection from: 192.168.0.105"}
+{"asctime": "2024-09-23 22:07:45,891", "name": "paramiko.transport", "levelname": "INFO", "message": "Connected (version 2.0, client OpenSSH_for_Windows_8.6)"}
+{"asctime": "2024-09-23 22:07:45,891", "name": "paramiko.transport", "levelname": "INFO", "message": "Auth rejected (none)."}
+{"asctime": "2024-09-23 22:07:45,891", "name": "root", "levelname": "INFO", "message": "client called get_allowed_auths (192.168.0.105) with username 91976"}
+{"asctime": "2024-09-23 22:07:48,148", "name": "root", "levelname": "INFO", "message": "new client credentials (192.168.0.105): username: 91976, password: sed"}
+{"asctime": "2024-09-23 22:07:48,148", "name": "paramiko.transport", "levelname": "INFO", "message": "Auth granted (password)."}
+{"asctime": "2024-09-23 22:07:48,148", "name": "root", "levelname": "INFO", "message": "client called check_channel_request (192.168.0.105): session"}
+{"asctime": "2024-09-23 22:07:48,148", "name": "root", "levelname": "INFO", "message": "Client mac (192.168.0.105): hmac-sha2-256-etm@openssh.com"}
+{"asctime": "2024-09-23 22:07:48,148", "name": "root", "levelname": "INFO", "message": "Client compression (192.168.0.105): none"}
+{"asctime": "2024-09-23 22:07:48,148", "name": "root", "levelname": "INFO", "message": "Client SSH version (192.168.0.105): SSH-2.0-OpenSSH_for_Windows_8.6"}
+{"asctime": "2024-09-23 22:07:48,148", "name": "root", "levelname": "INFO", "message": "Client SSH cipher (192.168.0.105): aes128-ctr"}
+{"asctime": "2024-09-23 22:07:49,478", "name": "root", "levelname": "INFO", "message": "Command receied (192.168.0.105): wfe"}
+{"asctime": "2024-09-23 22:07:50,551", "name": "root", "levelname": "INFO", "message": "Command receied (192.168.0.105): dv"}
+{"asctime": "2024-09-23 22:07:51,567", "name": "root", "levelname": "INFO", "message": "Command receied (192.168.0.105): ls"}
+{"asctime": "2024-09-23 22:07:51,567", "name": "root", "levelname": "INFO", "message": "Response from honeypot (192.168.0.105): "}
+{"asctime": "2024-09-23 22:08:01,583", "name": "paramiko.transport", "levelname": "INFO", "message": "Disconnect (code 11): disconnected by user"}
+2024-09-24 00:31:23,356 - root - INFO - New connection from: 192.168.0.105
+2024-09-24 00:31:23,356 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_for_Windows_8.6)
+2024-09-24 00:31:23,366 - paramiko.transport - INFO - Auth rejected (none).
+2024-09-24 00:31:23,366 - root - INFO - client called get_allowed_auths (192.168.0.105) with username 91976
+2024-09-24 00:31:25,232 - root - INFO - new client credentials (192.168.0.105): username: 91976, password: nkfenifne
+2024-09-24 00:31:25,232 - paramiko.transport - INFO - Auth granted (password).
+2024-09-24 00:31:25,232 - root - INFO - client called check_channel_request (192.168.0.105): session
+2024-09-24 00:31:25,232 - root - INFO - Client mac (192.168.0.105): hmac-sha2-256-etm@openssh.com
+2024-09-24 00:31:25,232 - root - INFO - Client compression (192.168.0.105): none
+2024-09-24 00:31:25,232 - root - INFO - Client SSH version (192.168.0.105): SSH-2.0-OpenSSH_for_Windows_8.6
+2024-09-24 00:31:25,232 - root - INFO - Client SSH cipher (192.168.0.105): aes128-ctr
+2024-09-24 00:31:26,591 - root - INFO - Command receied (192.168.0.105): dffbu
+2024-09-24 00:31:27,433 - root - INFO - Command receied (192.168.0.105): ls
+2024-09-24 00:31:27,433 - root - INFO - Response from honeypot (192.168.0.105): 
+2024-09-24 00:31:29,192 - root - INFO - Command receied (192.168.0.105): cd
+2024-09-24 00:31:39,203 - paramiko.transport - INFO - Disconnect (code 11): disconnected by user
+2024-09-24 02:09:32,822 - http_honeypot - INFO - HTTP Honeypot serving on port 8080
+2024-09-24 02:10:43,248 - http_honeypot - INFO - GET request from 127.0.0.1 for /
+2024-09-24 02:10:43,313 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-includes/css/dashicons.min.css
+2024-09-24 02:10:43,504 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-includes/css/buttons.min.css
+2024-09-24 02:10:43,646 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-admin/css/login.min.css
+2024-09-24 02:10:44,052 - http_honeypot - INFO - GET request from 127.0.0.1 for /favicon.ico
+2024-09-24 02:10:50,878 - http_honeypot - INFO - Login attempt from 127.0.0.1 - Username: ada, Password: dsc
+2024-09-24 02:10:51,163 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-login.php?err=1
+2024-09-24 02:10:51,539 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-includes/css/dashicons.min.css
+2024-09-24 02:10:51,539 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-includes/css/buttons.min.css
+2024-09-24 02:10:51,539 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-admin/css/login.min.css
+2024-09-24 02:10:51,791 - http_honeypot - INFO - GET request from 127.0.0.1 for /favicon.ico
+2024-09-24 02:11:08,530 - http_honeypot - INFO - Login attempt from 127.0.0.1 - Username: efwscfcsf, Password: sf
+2024-09-24 02:11:08,823 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-login.php?err=1
+2024-09-24 02:11:09,192 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-includes/css/dashicons.min.css
+2024-09-24 02:11:09,195 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-admin/css/login.min.css
+2024-09-24 02:11:09,195 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-includes/css/buttons.min.css
+2024-09-24 02:11:09,429 - http_honeypot - INFO - GET request from 127.0.0.1 for /favicon.ico
+2024-09-24 02:11:10,072 - http_honeypot - INFO - Login attempt from 127.0.0.1 - Username: , Password: 
+2024-09-24 02:11:10,381 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-login.php?err=1
+2024-09-24 02:11:10,743 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-includes/css/dashicons.min.css
+2024-09-24 02:11:10,748 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-includes/css/buttons.min.css
+2024-09-24 02:11:10,751 - http_honeypot - INFO - GET request from 127.0.0.1 for /wp-admin/css/login.min.css
+2024-09-24 02:11:11,002 - http_honeypot - INFO - GET request from 127.0.0.1 for /favicon.ico
+2024-09-24 02:11:51,888 - root - INFO - New connection from: 192.168.0.105
+2024-09-24 02:11:51,897 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_for_Windows_8.6)
+2024-09-24 02:11:51,933 - paramiko.transport - INFO - Auth rejected (none).
+2024-09-24 02:11:51,933 - root - INFO - client called get_allowed_auths (192.168.0.105) with username 91976
+2024-09-24 02:11:57,193 - root - INFO - new client credentials (192.168.0.105): username: 91976, password: sdcfasfadv
+2024-09-24 02:11:57,193 - paramiko.transport - INFO - Auth granted (password).
+2024-09-24 02:11:57,193 - root - INFO - client called check_channel_request (192.168.0.105): session
+2024-09-24 02:11:57,193 - root - INFO - Client mac (192.168.0.105): hmac-sha2-256-etm@openssh.com
+2024-09-24 02:11:57,193 - root - INFO - Client compression (192.168.0.105): none
+2024-09-24 02:11:57,193 - root - INFO - Client SSH version (192.168.0.105): SSH-2.0-OpenSSH_for_Windows_8.6
+2024-09-24 02:11:57,193 - root - INFO - Client SSH cipher (192.168.0.105): aes128-ctr
+2024-09-24 02:11:58,584 - root - INFO - Command receied (192.168.0.105): svs
+2024-09-24 02:11:59,025 - root - INFO - Command receied (192.168.0.105): vvs
+2024-09-24 02:11:59,308 - root - INFO - Command receied (192.168.0.105): v
+2024-09-24 02:11:59,524 - root - INFO - Command receied (192.168.0.105): s
+2024-09-24 02:12:00,098 - root - INFO - Command receied (192.168.0.105): v
+2024-09-24 02:12:00,316 - root - INFO - Command receied (192.168.0.105): s
+2024-09-24 02:12:00,886 - root - INFO - Command receied (192.168.0.105): svsv
+2024-09-24 02:12:10,898 - paramiko.transport - INFO - Disconnect (code 11): disconnected by user
+2024-09-24 19:17:28,490 - http_honeypot - INFO - HTTP Honeypot serving on port 8000
+2024-09-24 19:17:49,350 - http_honeypot - INFO - GET request from 192.168.0.105 for /
+2024-09-24 19:17:49,434 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.css
+2024-09-24 19:17:49,463 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.js
+2024-09-24 19:17:51,238 - http_honeypot - INFO - GET request from 192.168.0.105 for /favicon.ico
+2024-09-24 19:24:12,731 - http_honeypot - INFO - HTTP Honeypot serving on port 8000
+2024-09-24 19:24:59,362 - http_honeypot - INFO - GET request from 192.168.0.105 for /
+2024-09-24 19:24:59,437 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.css
+2024-09-24 19:24:59,442 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.js
+2024-09-24 19:59:03,568 - http_honeypot - INFO - HTTP Honeypot serving on port 8000
+2024-09-24 19:59:20,284 - http_honeypot - INFO - GET request from 192.168.0.105 for /
+2024-09-24 19:59:20,375 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.css
+2024-09-24 19:59:20,375 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.js
+2024-09-24 20:02:00,622 - http_honeypot - INFO - HTTP Honeypot serving on port 8000
+2024-09-24 20:06:12,451 - http_honeypot - INFO - HTTP Honeypot serving on port 8000
+2024-09-24 20:06:37,182 - http_honeypot - INFO - GET request from 192.168.0.105 for /
+2024-09-24 20:06:37,262 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.css
+2024-09-24 20:06:37,262 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.js
+2024-09-24 20:10:28,601 - http_honeypot - INFO - HTTP Honeypot serving on port 8000
+2024-09-24 20:10:54,446 - root - INFO - New connection from: 192.168.0.105
+2024-09-24 20:10:54,449 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_for_Windows_8.6)
+2024-09-24 20:10:54,489 - paramiko.transport - INFO - Auth rejected (none).
+2024-09-24 20:10:54,489 - root - INFO - client called get_allowed_auths (192.168.0.105) with username 91976
+2024-09-24 20:10:56,420 - root - INFO - new client credentials (192.168.0.105): username: 91976, password: sdbjfbfjs
+2024-09-24 20:10:56,420 - paramiko.transport - INFO - Auth granted (password).
+2024-09-24 20:10:56,420 - root - INFO - client called check_channel_request (192.168.0.105): session
+2024-09-24 20:10:56,435 - root - INFO - Client mac (192.168.0.105): hmac-sha2-256-etm@openssh.com
+2024-09-24 20:10:56,435 - root - INFO - Client compression (192.168.0.105): none
+2024-09-24 20:10:56,435 - root - INFO - Client SSH version (192.168.0.105): SSH-2.0-OpenSSH_for_Windows_8.6
+2024-09-24 20:10:56,435 - root - INFO - Client SSH cipher (192.168.0.105): aes128-ctr
+2024-09-24 20:10:57,828 - root - INFO - Command receied (192.168.0.105): ls
+2024-09-24 20:10:57,828 - root - INFO - Response from honeypot (192.168.0.105): 
+2024-09-24 20:11:02,823 - root - INFO - Command receied (192.168.0.105): cat user.txt
+2024-09-24 20:11:04,806 - root - INFO - Command receied (192.168.0.105): kfle
+2024-09-24 20:11:05,967 - root - INFO - Command receied (192.168.0.105): lvler
+2024-09-24 20:11:09,069 - root - INFO - Command receied (192.168.0.105): lmveel
+2024-09-24 20:11:19,084 - paramiko.transport - INFO - Disconnect (code 11): disconnected by user
+2024-09-24 20:11:26,421 - http_honeypot - INFO - GET request from 192.168.0.105 for /
+2024-09-24 20:11:26,509 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.css
+2024-09-24 20:11:26,543 - http_honeypot - INFO - GET request from 192.168.0.105 for /login.js

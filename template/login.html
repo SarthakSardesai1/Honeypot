@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>
+            <a href="#" class="wordpress-logo">WordPress</a>
+        </h1>
+        <form id="loginform" action="#" method="post">
+            <p>
+                <label for="user_login">Username or Email Address</label>
+                <input type="text" name="log" id="user_login" class="input" value="" size="20" autocapitalize="off" autocomplete="username">
+            </p>
+            <p>
+                <label for="user_pass">Password</label>
+                <input type="password" name="pwd" id="user_pass" class="input" value="" size="20" autocomplete="current-password">
+            </p>
+            <p class="forgetmenot">
+                <label for="rememberme">
+                    <input name="rememberme" type="checkbox" id="rememberme" value="forever"> Remember Me
+                </label>
+            </p>
+            <p class="submit">
+                <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Log In">
+            </p>
+        </form>
+        <p id="nav">
+            <a href="#">Lost your password?</a>
+        </p>
+        <p id="backtoblog">
+            <a href="#">← Go to WordPress</a>
+        </p>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
