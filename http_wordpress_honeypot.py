@@ -44,7 +44,7 @@ class WordPressHoneypot(http.server.SimpleHTTPRequestHandler):
         else:
             self.send_error(404)
         
-        logger.info(f"GET request from {self.client_address[0]} for {self.path}")
+        logger.info(f"GET request,{self.client_address[0]},{self.path}")
 
     def do_POST(self):
         content_length = int(self.headers['Content-Length'])
@@ -54,8 +54,7 @@ class WordPressHoneypot(http.server.SimpleHTTPRequestHandler):
         username = parsed_data.get('log', [''])[0]
         password = parsed_data.get('pwd', [''])[0]
         
-        log_message = f"Login attempt - IP: {self.client_address[0]}, Username: {username}, Password: {password}"
-        logger.info(log_message)
+        logger.info(f"LOGIN_ATTEMPT,{self.client_address[0]},{username},{password}")
         
         self.send_response(302)
         self.send_header('Location', '/wp-login.php?err=1')
@@ -63,8 +62,9 @@ class WordPressHoneypot(http.server.SimpleHTTPRequestHandler):
 
 def start_http_server(port=8080):
     with socketserver.TCPServer(("", port), WordPressHoneypot) as httpd:
-        logger.info(f"HTTP Honeypot serving on port {port}")
+        logger.info(f"HTTP_SERVER_START,{port}")
         httpd.serve_forever()
 
 if __name__ == "__main__":
     start_http_server()
+    
