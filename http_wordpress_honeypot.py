@@ -6,16 +6,37 @@ import os
 import json
 
 # Set up logging
+class JsonFormatter(logging.Formatter):
+    def format(self, record):
+        log_record = {
+            "asctime": self.formatTime(record, self.datefmt),
+            "name": record.name,
+            "levelname": record.levelname,
+            "message": record.getMessage()
+        }
+        return json.dumps(log_record)
+
 logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO,
     filename='http_honeypot.log')
 logger = logging.getLogger('http_honeypot')
 
-# Add a file handler to ensure logs are written to the file
+# Remove any existing handlers
+for handler in logger.handlers[:]:
+    logger.removeHandler(handler)
+
+# Add a file handler with JSON formatter
 file_handler = logging.FileHandler('http_honeypot.log')
-file_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+file_handler.setFormatter(JsonFormatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
 logger.addHandler(file_handler)
+
+# List of default credentials that will redirect to blank page
+DEFAULT_CREDENTIALS = [
+    ('admin', 'admin'),
+    ('root', 'admin'),
+    ('administrator', 'password'),
+]
+
 
 class WordPressHoneypot(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
@@ -28,6 +49,12 @@ class WordPressHoneypot(http.server.SimpleHTTPRequestHandler):
             self.send_header("Content-type", "text/html")
             self.end_headers()
             with open(os.path.join(self.directory, "login.html"), "rb") as f:
+                self.wfile.write(f.read())
+        elif parsed_path.path == "/blank.html":
+            self.send_response(200)
+            self.send_header("Content-type", "text/html")
+            self.end_headers()
+            with open(os.path.join(self.directory, "blank.html"), "rb") as f:
                 self.wfile.write(f.read())
         elif parsed_path.path.endswith('.css'):
             self.send_response(200)
@@ -44,7 +71,7 @@ class WordPressHoneypot(http.server.SimpleHTTPRequestHandler):
         else:
             self.send_error(404)
         
-        logger.info(f"GET request,{self.client_address[0]},{self.path}")
+        logger.info(f"GET,{self.client_address[0]},{self.path}")
 
     def do_POST(self):
         content_length = int(self.headers['Content-Length'])
@@ -54,11 +81,19 @@ class WordPressHoneypot(http.server.SimpleHTTPRequestHandler):
         username = parsed_data.get('log', [''])[0]
         password = parsed_data.get('pwd', [''])[0]
         
+        # Use self.client_address[0] to get the client's IP address
         logger.info(f"LOGIN_ATTEMPT,{self.client_address[0]},{username},{password}")
         
-        self.send_response(302)
-        self.send_header('Location', '/wp-login.php?err=1')
+        self.send_response(200)
+        self.send_header('Content-type', 'application/json')
         self.end_headers()
+
+        if (username, password) in DEFAULT_CREDENTIALS:
+            response = json.dumps({"status": "success", "redirect": "/blank.html"})
+        else:
+            response = json.dumps({"status": "error", "message": "Invalid username or password."})
+
+        self.wfile.write(response.encode())
 
 def start_http_server(port=8080):
     with socketserver.TCPServer(("", port), WordPressHoneypot) as httpd:
@@ -67,4 +102,3 @@ def start_http_server(port=8080):
 
 if __name__ == "__main__":
     start_http_server()
-    
