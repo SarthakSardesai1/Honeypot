@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import json
+from datetime import datetime
 
 def load_logs(file_path):
     try:
@@ -9,34 +11,71 @@ def load_logs(file_path):
     except FileNotFoundError:
         return []
 
-def parse_log(log):
-    # Implement parsing logic based on your log format
-    # This is a placeholder implementation
-    parts = log.split(' - ')
-    if len(parts) >= 2:
-        timestamp = parts[0]
-        message = ' - '.join(parts[1:])
-        return pd.to_datetime(timestamp), message
-    return None, None
+def parse_ssh_log(log):
+    try:
+        parts = log.split(' - ')
+        if len(parts) >= 4:
+            timestamp = parts[0]
+            level = parts[2]
+            message = ' - '.join(parts[3:])
+            return pd.to_datetime(timestamp), level, message, 'SSH'
+    except:
+        pass
+    return None, None, None, None
+
+def parse_http_log(log):
+    try:
+        log_data = json.loads(log)
+        timestamp = datetime.strptime(log_data['asctime'], '%Y-%m-%d %H:%M:%S,%f')
+        level = log_data['levelname']
+        message = log_data['message']
+        
+        if message.startswith('LOGIN_ATTEMPT'):
+            _, ip, username, password = message.split(',')
+            message = f"Login attempt - IP: {ip}, Username: {username}, Password: {password}"
+        
+        return timestamp, level, message, 'HTTP'
+    except:
+        return None, None, None, None
 
 st.title('Honeypot Logs')
 
 # Load SSH logs
 ssh_logs = load_logs('ssh_honeypot.log')
-ssh_data = [parse_log(log) for log in ssh_logs]
-ssh_df = pd.DataFrame(ssh_data, columns=['Timestamp', 'Message'])
-ssh_df = ssh_df.dropna()
+ssh_data = [parse_ssh_log(log) for log in ssh_logs]
 
 # Load HTTP logs
 http_logs = load_logs('http_honeypot.log')
-http_data = [parse_log(log) for log in http_logs]
-http_df = pd.DataFrame(http_data, columns=['Timestamp', 'Message'])
-http_df = http_df.dropna()
+http_data = [parse_http_log(log) for log in http_logs]
 
-# Display SSH logs
-st.header('SSH Logs')
-st.dataframe(ssh_df)
+# Combine SSH and HTTP logs
+all_logs = ssh_data + http_data
+df = pd.DataFrame([log for log in all_logs if log[0] is not None], 
+                  columns=['Timestamp', 'Level', 'Message', 'Type'])
 
-# Display HTTP logs
-st.header('HTTP Logs')
-st.dataframe(http_df)
+# Sort the dataframe by timestamp
+df = df.sort_values('Timestamp', ascending=False)
+
+# Add a filter for log type
+log_type_filter = st.selectbox('Filter by log type:', ['All', 'SSH', 'HTTP'])
+
+# Apply the filter
+if log_type_filter != 'All':
+    filtered_df = df[df['Type'] == log_type_filter]
+else:
+    filtered_df = df
+
+# Display the filtered logs
+st.header('Honeypot Logs')
+if not filtered_df.empty:
+    st.dataframe(filtered_df)
+else:
+    st.write("No logs found for the selected filter.")
+
+# Display login attempts
+st.header('Login Attempts')
+login_attempts = df[df['Message'].str.contains('Login attempt', na=False)]
+if not login_attempts.empty:
+    st.dataframe(login_attempts[['Timestamp', 'Type', 'Message']])
+else:
+    st.write("No login attempts recorded.")
