@@ -48,25 +48,13 @@ class WordPressHoneypot(http.server.SimpleHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-type", "text/html")
             self.end_headers()
-            with open(os.path.join(self.directory, "login.html"), "rb") as f:
+            with open(os.path.join(self.directory, "wp-admin.html"), "rb") as f:
                 self.wfile.write(f.read())
-        elif parsed_path.path == "/blank.html":
+        elif parsed_path.path == "/index.html":
             self.send_response(200)
             self.send_header("Content-type", "text/html")
             self.end_headers()
-            with open(os.path.join(self.directory, "blank.html"), "rb") as f:
-                self.wfile.write(f.read())
-        elif parsed_path.path.endswith('.css'):
-            self.send_response(200)
-            self.send_header("Content-type", "text/css")
-            self.end_headers()
-            with open(os.path.join(self.directory, parsed_path.path.lstrip('/')), "rb") as f:
-                self.wfile.write(f.read())
-        elif parsed_path.path.endswith('.js'):
-            self.send_response(200)
-            self.send_header("Content-type", "application/javascript")
-            self.end_headers()
-            with open(os.path.join(self.directory, parsed_path.path.lstrip('/')), "rb") as f:
+            with open(os.path.join(self.directory, "index.html"), "rb") as f:
                 self.wfile.write(f.read())
         else:
             self.send_error(404)
@@ -89,7 +77,7 @@ class WordPressHoneypot(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
 
         if (username, password) in DEFAULT_CREDENTIALS:
-            response = json.dumps({"status": "success", "redirect": "/blank.html"})
+            response = json.dumps({"status": "success", "redirect": "/index.html"})
         else:
             response = json.dumps({"status": "error", "message": "Invalid username or password."})
 
