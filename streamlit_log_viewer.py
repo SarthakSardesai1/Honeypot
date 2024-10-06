@@ -72,10 +72,4 @@ if not filtered_df.empty:
 else:
     st.write("No logs found for the selected filter.")
 
-# Display login attempts
-st.header('Login Attempts')
-login_attempts = df[df['Message'].str.contains('Login attempt', na=False)]
-if not login_attempts.empty:
-    st.dataframe(login_attempts[['Timestamp', 'Type', 'Message']])
-else:
-    st.write("No login attempts recorded.")
+# Removed the "Login Attempts" section
