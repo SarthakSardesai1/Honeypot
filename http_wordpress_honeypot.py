@@ -4,7 +4,7 @@ import logging
 from urllib.parse import parse_qs, urlparse
 import os
 import json
-
+from logger_config import http_logger
 # Set up logging
 class JsonFormatter(logging.Formatter):
     def format(self, record):
@@ -59,7 +59,7 @@ class WordPressHoneypot(http.server.SimpleHTTPRequestHandler):
         else:
             self.send_error(404)
         
-        logger.info(f"GET,{self.client_address[0]},{self.path}")
+        http_logger.info(f"GET,{self.client_address[0]},{self.path}")
 
     def do_POST(self):
         content_length = int(self.headers['Content-Length'])
@@ -69,8 +69,7 @@ class WordPressHoneypot(http.server.SimpleHTTPRequestHandler):
         username = parsed_data.get('log', [''])[0]
         password = parsed_data.get('pwd', [''])[0]
         
-        # Use self.client_address[0] to get the client's IP address
-        logger.info(f"LOGIN_ATTEMPT,{self.client_address[0]},{username},{password}")
+        http_logger.info(f"LOGIN_ATTEMPT,{self.client_address[0]},{username},{password}")
         
         self.send_response(200)
         self.send_header('Content-type', 'application/json')
@@ -83,9 +82,35 @@ class WordPressHoneypot(http.server.SimpleHTTPRequestHandler):
 
         self.wfile.write(response.encode())
 
+
+import logging
+import json
+
+class JsonFormatter(logging.Formatter):
+    def format(self, record):
+        log_record = {
+            "asctime": self.formatTime(record, self.datefmt),
+            "name": record.name,
+            "levelname": record.levelname,
+            "message": record.getMessage()
+        }
+        return json.dumps(log_record)
+
+
+
+# Remove all other logging configurations and imports
+
+# Replace all instances of logger.info, logger.debug, etc. with:
+http_logger.info('Your log message here')
+http_logger.debug('Your debug message here')
+# ... and so on for other log levels
+
+# Add handlers to the logger
+# http_logger.addHandler(http_file_handler)
+
 def start_http_server(port=8080):
     with socketserver.TCPServer(("", port), WordPressHoneypot) as httpd:
-        logger.info(f"HTTP_SERVER_START,{port}")
+        http_logger.info(f"HTTP_SERVER_START,{port}")
         httpd.serve_forever()
 
 if __name__ == "__main__":
