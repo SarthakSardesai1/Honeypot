@@ -6,6 +6,7 @@ import os
 
 from basic_ssh_honeypot import start_server as start_ssh_server
 from http_wordpress_honeypot import start_http_server
+from logger_config import ssh_logger, http_logger
 
 def run_streamlit():
     current_dir = os.path.dirname(os.path.abspath(__file__))
