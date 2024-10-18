@@ -14,6 +14,7 @@ from binascii import hexlify
 import json
 import logging
 # from paramiko.py3compat import b, u, decodebytes
+from logger_config import ssh_logger
 
 HOST_KEY = paramiko.RSAKey(filename='server.key')
 SSH_BANNER = "SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.1"
@@ -225,6 +226,13 @@ def start_server(port, bind):
     for thread in threads:
         thread.join()
 
+
+
+# Remove all other logging configurations and imports
+
+# Replace all instances of logging.info, logging.debug, etc. with:
+ssh_logger.info('Your log message here')
+ssh_logger.debug('Your debug message here')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run an SSH honeypot server')
